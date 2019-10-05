@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test for</title>
+</head>
+<body>
+字典是dict(zip('abced', range(1,6)))
+<ul>
+    {% for k, v in dct.items %}
+        {% if forloop.counter|divisibleby:"2" %}
+            <li style="color:blue">{{k}} {{v}}</li>
+        {% else %}
+            <li style="color:red">{{k}}  {{v}}</li>
+        {% endif %}
+<!--        <li style='color:{{forloop.counter|divisibleby:"2"|yesno:"red,blue"}}'>{{k}}{{v}}</li>-->
+
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>
